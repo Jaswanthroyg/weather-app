@@ -14,7 +14,8 @@ try:
         print("City:",data["name"])
         print("Temparature:",data["main"]["temp"],"°C")
         print("Weather:",data["weather"][0]["description"])
+        print("Humidity:",data["main"]["Humidity"]
     else:
-        print("Error:",response.status_code)
+        print("city not found or error:",response.status_code)
 except requests.exceptions.RequestException as e:
     print("Request failed:",e)
